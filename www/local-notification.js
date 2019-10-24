@@ -37,6 +37,7 @@ exports._defaults = {
     group         : null,
     groupSummary  : false,
     icon          : null,
+    iconType      : null,
     id            : 0,
     launch        : true,
     led           : true,
@@ -898,7 +899,7 @@ exports._exec = function (action, args, callback, scope) {
 
     if (Array.isArray(args)) {
         params = args;
-    } else if (args) {
+    } else if (args !== null) {
         params.push(args);
     }
 
