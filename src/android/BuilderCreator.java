@@ -111,7 +111,8 @@ public final class BuilderCreator {
             // when
             .setUsesChronometer(options.isAndroidUsesChronometer())
             .setGroup(options.getGroup())
-            .setGroupSummary(options.isGroupSummary());
+            .setGroupSummary(options.isGroupSummary())
+            .setLights(options.getLedColor(), options.getLedOn(), options.getLedOff());
 
         // Specify the duration in milliseconds after which this notification should be canceled
         if (options.getAndroidTimeoutAfter() >= 0) builder.setTimeoutAfter(options.getAndroidTimeoutAfter());
